@@ -56,12 +56,12 @@ const Home=() => {
                         {  prevUrl && <button onClick={()=>{
                             setpokemonDate([])
                            setUrl(prevUrl) 
-                        }}>Previous</button>}
+                        }}>Anterior</button>}
 
                         { nextUrl && <button onClick={()=>{
                             setpokemonDate([])
                             setUrl(nextUrl)
-                        }}>Next</button>}
+                        }}>Próximo</button>}
 
                     </div>
                 </div>
