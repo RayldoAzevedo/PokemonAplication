@@ -1,5 +1,6 @@
 import React from "react";
 import Pokemon from "./Pokemon";
+import Details from "./Details";
 import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -42,13 +43,13 @@ const Home=() => {
 
     return(
         <>
-            <div className="container">
+            <div className="container grid grid-cols-2">
                 <div className="text-center">
-
+                    
                     <Pokemon 
                         pokemon={pokemonDate} 
                         loading={loading} 
-                        // infoPokemon={poke=>setpokemonDetails(poke)}
+                        getInfo={poke=>setpokemonDetails(poke)}
                     />
                     
                     <div className="btn-group">
@@ -64,8 +65,9 @@ const Home=() => {
 
                     </div>
                 </div>
-                <div className="right-content">
-                   {/* <Pokeinfo data={pokemonDetails}/> */}
+
+                <div className="m-5 container">
+                   <Details data={pokemonDetails}/>
                 </div>
             </div>
         </>
